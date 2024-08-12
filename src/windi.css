@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+
+@layer base {
+  body {
+    @apply text-text;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  p {
+    @apply text-[16px] font-normal !leading-[22px];
+  }
+
+  *:focus {
+    @apply !outline-none !ring-0;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  /* Title typography */
+  .title-20 {
+    @apply font-bold text-[20px] leading-[20px];
+  }
+
+  /* Label typography */
+  .label-11 {
+    @apply font-medium text-[11px] leading-[16px];
+  }
+
+  .label-13 {
+    @apply font-semibold text-[13px] leading-[20px];
+  }
+
+  .label-15 {
+    @apply font-semibold text-[15px] leading-[18px];
+  }
+
+  .label-dropdown-14 {
+    @apply font-bold text-[14px] leading-[20px];
+  }
+
+  /* Dropdown typography  */
+  .dropdown-16 {
+    @apply font-bold text-[16px] leading-[20px];
+  }
+
+  /* Volume typography */
+  .volume-16 {
+    @apply font-normal text-[16px] leading-[18px];
+  }
+
+  .volume-17 {
+    @apply font-bold text-[17px] leading-[24px];
+  }
+
+  .volume-22 {
+    @apply font-bold text-[22px] leading-[32px];
+  }
+
+  .volume-32 {
+    @apply font-semibold text-[32px] leading-[24px];
+  }
+
+  /* Button typography */
+  .button-16 {
+    @apply font-bold text-[16px] leading-[18px];
+  }
+
+  .button-14 {
+    @apply font-bold text-[14px] leading-[18px];
+  }
+
+  /* Input typography */
+  .input-18 {
+    @apply font-normal text-[18px] leading-[20px];
+  }
+
+  /* Link typography */
+  .link-15 {
+    @apply font-semibold text-[15px] leading-[16px];
+  }
+
+  /* Tapbar typography */
+  .tapbar-11 {
+    @apply font-bold text-[11px] leading-[15px];
+  }
+
+  /* Link */
+  .link {
+    @apply underline text-primary-blue hover:text-primary-cloud;
+  }
+
+  .input-field {
+    @apply transition bg-bg-white h-10 px-3 rounded-md border border-primary-cloud hover:border-primary-blue focus:border-primary-blue;
+  }
+
+  .input-field.error {
+    @apply border-move-spending hover:border-move-spending focus:border-move-spending text-move-spending placeholder-move-spending;
+  }
+
+  /* Button */
+  .btn {
+    @apply transition h-12 px-4 bg-transparent text-primary-blue border border-primary-blue hover: bg-bg-secondary rounded-md flex items-center justify-center;
+  }
+
+  .btn.primary {
+    @apply bg-primary-blue hover:bg-bg-primary text-bg-white;
+  }
+
+  .btn.danger {
+    @apply bg-danger border-danger hover:bg-danger-hover hover:border-danger-hover text-bg-white;
+  }
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .full-screen-center {
+    @apply h-screen flex flex-col items-center justify-center bg-bg-secondary;
+  }
+}
